@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 const Counter = (props) => {
   // const [value, setValue] = useState(props.value);
@@ -12,25 +12,25 @@ const Counter = (props) => {
     classes += value === 0 ? "bg-warning" : "bg-primary";
     return classes;
   };
-  const handleIncrement = () => {
-    // setValue((prevstate) => prevstate + 1);
-  };
-  const handleDecrement = () => {
-    // setValue((prevstate) => prevstate - 1);
-  };
+  // const handleIncrement = () => {
+  //   setValue((prevstate) => prevstate + 1);
+  // };
+  // const handleDecrement = () => {
+  //   setValue((prevstate) => prevstate - 1);
+  // };
   return (
     <div>
       <span>{props.name}</span>
       <span className={getBadgeClasses()}>{formatValue()}</span>
       <button
         className="btn btn-primary btn-m m-2"
-        onClick={() => props.onIncrement()}
+        onClick={() => props.onIncrement(props.id)}
       >
         +
       </button>
       <button
         className="btn btn-primary btn-m m-2"
-        onClick={() => props.onDecrement()}
+        onClick={() => props.onDecrement(props.id)}
       >
         -
       </button>
